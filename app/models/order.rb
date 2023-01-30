@@ -3,6 +3,8 @@ class Order < ApplicationRecord
   belongs_to :merchant
   belongs_to :shopper
 
+  validates :merchant_id, :shopper_id, presence: true
+
   before_create :calculate_disbursement_and_fee!
 
   private
