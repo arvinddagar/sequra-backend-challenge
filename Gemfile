@@ -35,6 +35,12 @@ gem 'sidekiq'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 6.0.0'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  # %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  #   gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
+  # end
 end
 
 group :development do
@@ -54,6 +60,7 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
